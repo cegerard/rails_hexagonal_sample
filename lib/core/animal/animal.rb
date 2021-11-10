@@ -20,9 +20,16 @@ module Core
         remaining_food
       end
 
+      def restore_health(quantity)
+        @health_behaviour.add_health(quantity)
+      end
+
       def fed?
         !@health_behaviour.hungry?
       end
+
+      def sick?
+        @health_behaviour.sick?
       end
 
     end

@@ -1,6 +1,6 @@
 module Core
   module Animal
-  module Behaviours
+    module Behaviours
       class AbstractHealthBehaviour
 
         def initialize()
@@ -13,10 +13,18 @@ module Core
           raise NotImplementedError
         end
 
+        # @param [Integer] quantity
+        def add_health(quantity)
+          raise NotImplementedError
+        end
+
         def fed?
           raise NotImplementedError
         end
 
+        def sick?
+          raise NotImplementedError
+        end
 
       end
     end

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 require './lib/core/animal/animal'
-require './lib/core/animal/behaviours/big_animal_behaviour'
+require './lib/core/animal/behaviours/big_animal_health_behaviour'
 require './lib/core/animal/behaviours/carnivor_eat_behaviour'
 require './lib/core/animal/behaviours/vegetarian_eat_behaviour'
 require './lib/core/food/empty_food'
@@ -11,7 +11,7 @@ require './lib/use_cases/zoo_keeper/feed_animal'
 describe UseCases::ZooKeeper::FeedAnimal do
   subject(:feed) { described_class.new }
 
-  let(:health_behaviour) { Core::Animal::Behaviours::BigAnimalBehaviour.new }
+  let(:health_behaviour) { Core::Animal::Behaviours::BigAnimalHealthBehaviour.new }
 
   context 'when the animal to feed is carnivor' do
     let(:eat_behaviour) { Core::Animal::Behaviours::CarnivorEatBehaviour.new }
