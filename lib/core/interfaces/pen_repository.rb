@@ -1,10 +1,12 @@
 module Core
-  class PenRepository
+  module Interfaces
+    class PenRepository
 
-    # @param [Core::PenNumber] pen_number
-    def get(pen_number)
-      raise 'Not Implemented'
+      # @param [Core::Pen::PenNumber] pen_number
+      def get(pen_number)
+        raise 'Not Implemented'
+      end
+
     end
-
   end
 end
