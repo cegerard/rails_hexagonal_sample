@@ -1,16 +1,16 @@
 
 require 'spec_helper'
 
-require './lib/core/animal'
-require './lib/core/pen'
-require './lib/core/pen_number'
-require './lib/core/pen_repository'
+require './lib/core/animal/animal'
+require './lib/core/pen/pen'
+require './lib/core/pen/pen_number'
+require './lib/core/interfaces/pen_repository'
 require './lib/use_cases/zoo_keeper/place_animal_in_pen'
 
 describe UseCases::ZooKeeper::PlaceAnimalInPen do
   subject(:place_in_pen) { described_class.new(pen_repository) }
   
-  let(:animal) { Core::Animal.new }
+  let(:animal) { Core::Animal.new(nil) }
   let(:pen_repository) { instance_double(Core::PenRepository) }
 
   before do

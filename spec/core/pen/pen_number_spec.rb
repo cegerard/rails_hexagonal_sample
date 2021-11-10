@@ -2,7 +2,7 @@
 require 'faker'
 require 'spec_helper'
 
-require './lib/core/pen_number'
+require './lib/core/pen/pen_number'
 
 describe Core::PenNumber do
   subject(:pen_number) { described_class.new(number) }
