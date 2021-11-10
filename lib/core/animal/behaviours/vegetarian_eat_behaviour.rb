@@ -1,15 +1,19 @@
 require './lib/core/animal/behaviours/abstract_eat_behaviour'
 
 module Core
-  class VegetarianEatBehaviour < AbstractEatBehaviour
-
-    def eat(food)
-      if food.vegetables?
-        return food.eat_all
+  module Animal
+    module Behaviours
+      class VegetarianEatBehaviour < AbstractEatBehaviour
+      
+        def eat(food)
+          if food.vegetables?
+            return food.eat_all
+          end
+        
+          food
+         end
+       
       end
-
-      food
-     end
-
+    end
   end
 end

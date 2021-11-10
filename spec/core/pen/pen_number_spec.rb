@@ -4,7 +4,7 @@ require 'spec_helper'
 
 require './lib/core/pen/pen_number'
 
-describe Core::PenNumber do
+describe Core::Pen::PenNumber do
   subject(:pen_number) { described_class.new(number) }
   
   context 'when the number is valid' do
